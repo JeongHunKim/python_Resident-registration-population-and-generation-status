@@ -18,9 +18,14 @@ for idx,i in enumerate(p_age[1:]):
         if i[0][-7:-1].count('0') < 5:
             if max<int(i[1].replace(',', '')):
                 max=int(i[1].replace(',', ''))
-                index=idx
+                index=idx+1
     except ValueError as e: print(e)
     except AttributeError as e: print(e)
             
-print(p_age[index][0],p_age[index][1])
-print(max)
+#print(p_age[index][0],p_age[index][1])
+
+max_chart=[]
+for i in p_age[index][3:104]:
+    max_chart.append(int(i.replace(',', '')))    
+    
+plt.plot(max_chart)
