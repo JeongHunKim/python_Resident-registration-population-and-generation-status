@@ -1,6 +1,6 @@
 import csv
 
-f=open("D:/kjh/0412/people_age.csv")
+f=open("path/people_age.csv")
 main_data = csv.reader(f)
 #print(main_data)
 
